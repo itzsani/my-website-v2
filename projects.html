@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Syed Hussain-Sani</title>
+  <meta name="description" content="Explore projects by Syed Hussain-Sani — creative tech solutions from backend systems to data-driven apps.">
+  <meta name="author" content="Syed Hussain-Sani">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Video Overlay -->
+  <div class="video-background">
+    <video autoplay muted loop id="bgVideo">
+      <source src="assets/video/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="section" style="padding-top: 120px;">
+    <div class="section-container fade-in">
+      <h2 style="font-family: 'Orbitron', sans-serif; font-size: 2rem; color: var(--electric-blue); margin-bottom: 2rem; text-align: center;">Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <div class="project-card" onclick="openModal(1)">
+          <h3>Spring Social Media Blog API</h3>
+          <p>Spring Boot API handling registration, login & messages.</p>
+          <span class="btn-glow">Details</span>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card" onclick="openModal(2)">
+          <h3>Social Blog API (Javalin)</h3>
+          <p>Java & Javalin-based backend for account + message handling.</p>
+          <span class="btn-glow">Details</span>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card" onclick="openModal(3)">
+          <h3>Library Management System</h3>
+          <p>Java + SQL app for book inventory and lending logic.</p>
+          <span class="btn-glow">Details</span>
+        </div>
+
+      
+<!-- Project Card 4 -->
+<div class="project-card" onclick="openModal(4)">
+  <h3>JavaFX Calculator</h3>
+  <p>Simple and intuitive calculator built using JavaFX.</p>
+  <span class="btn-glow">Details</span>
+</div>
+
+<!-- Project Card 5 -->
+<div class="project-card" onclick="openModal(5)">
+  <h3>ERP IT Asset Dashboard</h3>
+  <p>Inventory management dashboard using Oracle ERP and SQL reports.</p>
+  <span class="btn-glow">Details</span>
+</div>
+
+<!-- Project Card 6 -->
+<div class="project-card" onclick="openModal(6)">
+  <h3>Portfolio Website v1</h3>
+  <p>My first HTML/CSS-based portfolio with section animations and clean layout.</p>
+  <span class="btn-glow">Details</span>
+</div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(1)">&times;</span>
+      <h3>Spring Social Media Blog API</h3>
+      <p>Built with Spring Boot + JPA. Handles user authentication, message creation, and CRUD endpoints with unit testing.</p>
+      <p><strong>Stack:</strong> Java, Spring Boot, REST, JPA, JUnit</p>
+      <a href="https://github.com/itzsani/itzsani-pep-spring-project" target="_blank" class="btn-glow">View Code</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(2)">&times;</span>
+      <h3>Social Blog API (Javalin)</h3>
+      <p>Lightweight Java backend using Javalin framework and JDBC. Includes user CRUD and message storage logic.</p>
+      <p><strong>Stack:</strong> Java, Javalin, JDBC, SQL</p>
+      <a href="https://github.com/itzsani/itzsani-pep-project" target="_blank" class="btn-glow">View Code</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(3)">&times;</span>
+      <h3>Library Management System</h3>
+      <p>Full CRUD functionality for managing books and members. Java console app backed by SQL schema.</p>
+      <p><strong>Stack:</strong> Java, JDBC, MySQL</p>
+      <a href="https://github.com/itzsani/library-management-system" target="_blank" class="btn-glow">View Code</a>
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn">↑</button>
+
+  <!-- Scripts -->
+  <script>
+    function openModal(n) {
+      document.getElementById("modal" + n).style.display = "block";
+    }
+    function closeModal(n) {
+      document.getElementById("modal" + n).style.display = "none";
+    }
+    window.onclick = function (event) {
+      [1, 2, 3].forEach(n => {
+        const modal = document.getElementById("modal" + n);
+        if (event.target === modal) modal.style.display = "none";
+      });
+    };
+  </script>
+  <script src="assets/js/script.js"></script>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(4)">&times;</span>
+    <h3>JavaFX Calculator</h3>
+    <p>GUI calculator created with JavaFX. Performs basic operations with clean layout.</p>
+    <p><strong>Stack:</strong> Java, JavaFX</p>
+    <a href="https://github.com/itzsani/JavaFXCalculator" target="_blank" class="btn-glow">View Code</a>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(5)">&times;</span>
+    <h3>ERP IT Asset Dashboard</h3>
+    <p>Used Oracle ERP and SQL to manage inventory, generate reports, and track assets.</p>
+    <p><strong>Stack:</strong> Oracle ERP, SQL, Tableau</p>
+    <a href="https://github.com/itzsani/erp-it-asset-dashboard" target="_blank" class="btn-glow">View Code</a>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(6)">&times;</span>
+    <h3>Portfolio Website v1</h3>
+    <p>Responsive HTML/CSS portfolio website with section transitions and anchor navigation.</p>
+    <p><strong>Stack:</strong> HTML, CSS</p>
+    <a href="https://github.com/itzsani/portfolio-v1" target="_blank" class="btn-glow">View Code</a>
+  </div>
+</div>
+
+</body>
+</html>
